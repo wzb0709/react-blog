@@ -1,12 +1,28 @@
 import React from 'react';
-import styles from './index.css';
+import {Layout, Row, Col} from 'antd';
+
+import styles from './index.less';
+import HeaderLeft from "@/components/layout/headerLeft"
+import HeaderRight from "@/components/layout/headerRight"
+
+const {Header} = Layout
 
 const BasicLayout: React.FC = props => {
   return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      {props.children}
-    </div>
+    <>
+      <Layout>
+        <Header className={styles.header}>
+          <Row>
+            <Col span={4}>
+              <HeaderLeft />
+            </Col>
+            <Col span={20}>
+              <HeaderRight />
+            </Col>
+          </Row>
+        </Header>
+      </Layout>
+    </>
   );
 };
 
