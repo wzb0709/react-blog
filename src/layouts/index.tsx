@@ -6,7 +6,7 @@ import HeaderLeft from "@/components/layout/headerLeft/headerLeft"
 import HeaderRight from "@/components/layout/headerRight/headerRight"
 import LayoutSider from "@/components/layout/sider/LayoutSider"
 
-const {Header,Sider} = Layout
+const {Header,Sider,Content} = Layout
 
 const BasicLayout: React.FC = props => {
   return (
@@ -27,6 +27,9 @@ const BasicLayout: React.FC = props => {
           <Sider width={250} className={styles.sider} theme='light'>
             <LayoutSider />
           </Sider>
+          <Content className={styles.content}>
+            {props.children}
+          </Content>
         </Layout>
       </Layout>
     </>
