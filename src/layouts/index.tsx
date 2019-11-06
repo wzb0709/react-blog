@@ -2,10 +2,11 @@ import React from 'react';
 import {Layout, Row, Col} from 'antd';
 
 import styles from './index.less';
-import HeaderLeft from "@/components/layout/headerLeft"
-import HeaderRight from "@/components/layout/headerRight"
+import HeaderLeft from "@/components/layout/headerLeft/headerLeft"
+import HeaderRight from "@/components/layout/headerRight/headerRight"
+import LayoutSider from "@/components/layout/sider/LayoutSider"
 
-const {Header} = Layout
+const {Header,Sider} = Layout
 
 const BasicLayout: React.FC = props => {
   return (
@@ -21,6 +22,12 @@ const BasicLayout: React.FC = props => {
             </Col>
           </Row>
         </Header>
+        <div style={{height:40,background:'#FFF'}} />
+        <Layout style={{background:'#FFF'}}>
+          <Sider width={250} className={styles.sider} theme='light'>
+            <LayoutSider />
+          </Sider>
+        </Layout>
       </Layout>
     </>
   );

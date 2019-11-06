@@ -102,3 +102,35 @@
   }
 }
 
+//左侧sider
+.sider{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .avatar{ //头像
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f0f1f2;
+  }
+  .name{ //昵称
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .description{ //自我介绍
+    font-size: 15px;
+    color: #AAA;
+    margin-top: 5px;
+  }
+  .popular_article_title{ //热门文章标题列表
+    width: 100%;
+    padding: 0 18px;
+    .vertical_centering(@height:35px);
+    &:hover{
+      color: #1890ff;
+      background-color: #f0f1f2;
+      cursor: pointer;
+    }
+  }
+}

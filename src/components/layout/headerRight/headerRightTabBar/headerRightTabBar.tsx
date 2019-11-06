@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 
 import styles from "@/components/layout/layout.less"
-import SwitchBar from "@/components/layout/switchBar"
-import LoginBar from "@/components/layout/loginBar"
+import SwitchBar from "@/components/layout/headerRight/headerRightTabBar/switchBar"
+import LoginBar from "@/components/layout/headerRight/headerRightTabBar/loginBar"
 
 const HeaderRightTabBar:FC = (props) => {
   return (
