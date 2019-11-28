@@ -1,0 +1,63 @@
+@import (reference) "../layout/layout.less";
+.home_left{
+  width: 75%;
+  height: 100%;
+  //overflow-y: auto;
+  .article_item{
+    width: 100%;
+    height: 400px;
+    border: 1px solid #f0f1f2;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    &:hover{
+      background: #effbff;
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+      transform: translate3d(0, -5px 0);
+    }
+    &_title{
+      font-size: 22px;
+      font-weight: bold;
+      span{
+        font-size: 12px;
+        font-weight: normal;
+        margin-left: 20px;
+      }
+    }
+    &_content{
+      height: 250px;
+      overflow: hidden;
+      margin: 0 auto;
+      font-family: 'Lato', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      color: #555;
+      line-height: 2;
+    }
+    &_footer{
+      height: 45px;
+      display: flex;
+      align-items: center;
+      .icon{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+.home_right{
+  width: 300px;
+  min-height: 100%;
+  padding-left: 20px;
+  position: fixed;
+  right: 30px;
+  top: 100px;
+  .article_title{
+    width: 100%;
+    padding: 0 18px;
+    .vertical_centering(@height:35px);
+    .textOverflow();
+    &:hover{
+      color: #1890ff;
+      background-color: #f0f1f2;
+      cursor: pointer;
+    }
+  }
+}

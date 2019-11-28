@@ -2,6 +2,7 @@ import React, {FC, useState} from 'react';
 import {Divider, Icon, Row, Tag} from "antd"
 
 import styles from "@/components/layout/layout.less"
+import {getTagColor} from "@/utils/tags"
 
 const LayoutSider: FC = () => {
 
@@ -27,7 +28,13 @@ const LayoutSider: FC = () => {
       <div style={{padding:'0 20px'}}>
         {tags.map((item, index) => {
           return (
-            <Tag style={{marginBottom:8,cursor:'pointer'}} key={index} color="magenta">{item}</Tag>
+            <Tag
+              style={{marginBottom:8,cursor:'pointer'}}
+              key={index}
+              color={getTagColor()}
+            >
+              {item}
+            </Tag>
           )
         })}
       </div>

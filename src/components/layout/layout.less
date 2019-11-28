@@ -18,6 +18,11 @@
   line-height: @height;
   height: @height;
 }
+.textOverflow{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 //导航栏左侧
 .header_left {
@@ -127,6 +132,7 @@
     width: 100%;
     padding: 0 18px;
     .vertical_centering(@height:35px);
+    .textOverflow();
     &:hover{
       color: #1890ff;
       background-color: #f0f1f2;
